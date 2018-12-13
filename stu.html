@@ -8,28 +8,30 @@
    var stu3=new student("sai tejaswi");
    var stu4=new student("likhitha");
    var stu5=new student("prabha");
+   var stu=[stu1,stu2,stu3,stu4,stu5];
    var names=new Array(5);
    var totals=new Array(5);
    var avgs=new Array(5);
    function student(name)
    {
       this.name=name;
-      var subject=new Array(Math.floor(Math.random() *100),Math.floor(Math.random() *100),Math.floor(Math.random() *100));
-     names.push(name);
+      var subject=new Array(Math.floor(Math.random() *100),Math.floor(Math.random() *100),Math.floor(Math.random() *100));}
+     for(var j=0;j<5;j++){
+     names.push(stu[i].name);
      // <h1>sort based on name</h1>
-      names.sort(function(a,b)
+      /*names.sort(function(a,b)
       {
           return (a-b);
       }
-    );
+    );*/
     var total=0;
-    /*for(var i=0;i<3;i++)
+    for(var i=0;i<3;i++)
       {
-        total=total+subject[i];
-       }*/
-    total=subject[0]+subject[1]+subject[2];
+        total=total+stu[i].subject[j];
+       }
+    //total=subject[0]+subject[1]+subject[2];
     totals.push(total);
-    avg=total/3;
+    var avg=total/3;
     avgs.push(avg);
    }
    //<h1>sort based on averages</h1>
@@ -43,6 +45,10 @@
       {
           return (a-b);
       }
-    );   
+    );
+names.sort(function(a,b)
+      {
+          return (a-b);
+      });   
 </script>
 </html>
